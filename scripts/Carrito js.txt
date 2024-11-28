@@ -1,0 +1,112 @@
+// Selección de elementos del DOM
+const btnCart = document.querySelector('.carrito');
+const ContainerCartProducts = document.querySelector('.container-cart-products');
+const rowProduct = document.querySelector('.row-product');
+let allProducts = [];
+const valorTotal = document.querySelector('.total-pagar');
+const countProducts = document.querySelector('#contador-productos');
+
+// Evento para mostrar/ocultar el carrito
+btnCart.addEventListener('click', () => {
+    ContainerCartProducts.classList.toggle('hidden-cart');
+});
+
+// Función para mostrar los productos en el carrito
+const showHTML = () => {
+    rowProduct.innerHTML = ''; // Limpiar el contenedor antes de agregar nuevos elementos
+
+    let total = 0;
+    let totalOfProduct = 0;
+
+    allProducts.forEach(product => {
+        const containerProduct = document.createElement('div');
+        containerProduct.classList.add('cart-product');
+
+        containerProduct.innerHTML = `
+            <div class="info-cart-product">
+                <span class="cantidad-producto-carrito">${product.quantity}</span>
+                <p class="titulo-producto-carrito">${product.titulo}</p>
+                <span class="precio-producto-carrito">$${(product.price * product.quantity).toFixed(2)}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon-close" data-title="${product.titulo}">
+                    <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                </svg>
+            </div>`;
+
+        rowProduct.append(containerProduct);
+        total += product.quantity * product.price;
+        totalOfProduct += product.quantity;
+    });
+
+    valorTotal.innerText = `$${total.toFixed(2)}`;
+    countProducts.innerText = totalOfProduct;
+}
+
+// Evento para eliminar productos del carrito
+rowProduct.addEventListener('click', e => {
+    if (e.target.classList.contains('icon-close')) {
+        const titleToRemove = e.target.getAttribute('data-title');
+        allProducts = allProducts.filter(product => product.titulo !== titleToRemove);
+        showHTML();
+    }
+});
+
+// Función para agregar el producto al carrito
+const agregarProductoAlCarrito = () => {
+    const titulo = document.querySelector('.descripcionCombo h1').textContent; // Asegúrate de que esto coincida con tu HTML
+    const price = parseFloat(document.querySelector('.precio').textContent.replace('$', '').replace('.', '').replace(',', ''));
+
+    const infoProduct = {
+        quantity: 1,
+        titulo: titulo,
+        price: price,
+    };
+
+    const existingProduct = allProducts.find(item => item.titulo === infoProduct.titulo);
+    if (existingProduct) {
+        existingProduct.quantity++;
+    } else {
+        allProducts.push(infoProduct);
+    }
+
+    showHTML(); // Actualizar el carrito
+}
+
+// Funciones para manejar los modales
+const handleModal = (btnAgregar, modal, closeBtn, addToCartBtn) => {
+    if (btnAgregar) {
+        btnAgregar.addEventListener('click', () => {
+            modal.classList.remove('hidden'); // Muestra el modal
+        });
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            modal.classList.add('hidden'); // Oculta el modal
+        });
+    }
+
+    if (addToCartBtn) {
+        addToCartBtn.addEventListener('click', () => {
+            agregarProductoAlCarrito(); // Agrega el producto al carrito
+            modal.classList.add('hidden'); // Oculta el modal
+        });
+    }
+};
+
+// Funciones para manejar el modal de Talla S
+const btnInfoS = document.getElementById('btnAgregar');
+const modalS = document.getElementById('modalS');
+const closeS = document.querySelector('.closeS');
+const btnCerrarModalS = document.getElementById('btnCerrarModalS');
+
+// Llama a la función para manejar el modal de Talla S
+handleModal(btnInfoS, modalS, closeS, btnCerrarModalS);
+
+// Funciones para manejar el modal de Talla M
+const btnInfoM = document.getElementById('btnAgregarM');
+const modalM = document.getElementById('modalM');
+const closeM = document.querySelector('.closeM'); // Asegúrate de que esto seleccione el correcto
+const btnCerrarModalM = document.getElementById('btnCerrarModalM');
+
+// Llama a la función para manejar el modal de Talla M
+handleModal(btnInfoM, modalM, closeM, btnCerrarModalM);

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Catalogo.css">
+    <link rel="icon" href="icon/2.ico" sizes="128x128" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <a class="navbar-brand" href="VistaCliente.html"><img src="icon/7.ico" width="300"></a>
+        <div class="collapse navbar-collapse shadow" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="VistaCliente.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Catalogo.html">Catálogo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contáctanos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        Perfil
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="Profile">
+                            <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd" />
+                        </svg>  
+                    </a>
+                </li>
+                <div class="carrito"><h1>CARRITO</h1><img src="Images/carrito.png"></div>
+                <div class="count-products">
+                    <span id="contador-productos">0</span>
+                </div>
+                <div class="container-cart-products hidden-cart shadow">
+                    <div class="row-product">
+                        <div class="cart-product">
+                            <div class="info-cart-product">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon-close">
+                                    <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-total">
+                        <h3>Total:</h3>
+                        <span class="total-pagar">$00.000</span>
+                    </div>
+                </div>
+                
+            </ul>
+        </div>
+    </nav>
+    <div class="LaVida">
+        <h1>¡La vida sabe mejor con una <span class="DNUT">DNUT!</span></h1>
+    </div>
+    <div class="ProductoCombos shadow">
+        <div class="title">
+            <div class="Combos shadow"><h1>Combos</h1></div>
+        </div>
+        <div class="seleccion">
+            <div class="Cajas1 shadow">
+                <div class="descripcionCombo">
+                    <h1>Talla S</h1>
+                    <h2>Bolsa de 6 dnts.<br>
+                    ¡Elige tus sabores favoritos!</h2>
+                    <br>
+                    <div class="precio">$10.000</div>
+                    <button class="boton shadow" id="btnAgregarS">Agregar</button>
+
+                </div>
+                <div class="imagenCombo"><img src="Images/imagenCaja1.jpg"></div>
+            </div>
+            <div id="modalS" class="modal hidden">
+                <div class="modal-content">    
+                    <div class="imagenModal">
+                        <img id="modal-imageS" src="Images/imagenModal1.jpg" alt="Imagen Modal Talla S">
+                    </div>               
+                    <div class="info">
+                        <span class="closeS close">&times;</span>
+                        <div class="infoCaja1">
+                            <h2 id="modal-title">Combo<br><span class="tallas">Talla S.</span></h2>
+                            <p id="modal-descriptionS">Bolsa de 6 donas, en donde puedes escoger un solo sabor de masa, una sola cobertura y un solo topping para todas las donas. ¡Elige tus sabores favoritos!</p>
+                            <hr class="linea">
+                            <p>Descripción detallada del producto</p>
+                            <div class="modal-price" id="modal-priceS">$10.000</div>
+                        </div>
+                        <button id="btnCerrarModalS" class="btn-add-cart cart shadow">Agregar al carrito</button> 
+                    </div>
+                </div>
+            </div>
+            <div class="Cajas2 shadow">
+                <div class="descripcionCombo">
+                    <h1>Talla M</h1>
+                    <h2>Bolsa/caja de 12 dnts.<br>¡Elige tus sabores favoritos!</h2>
+                    <br>
+                    <div class="precio">$20.000</div>
+                    <button id="btnAgregarM" class="boton shadow">Agregar</button>
+                </div>
+                <div class="imagenCombo">
+                    <img src="Images/caja.png" alt="Caja de Talla M">
+                </div>
+            </di
+            v>
+            
+            <div id="modalM" class="modal hidden">
+                <div class="modal-content">    
+                    <div class="imagenModal">
+                        <img id="modal-imageM" src="Images/imagenModal1.jpg" alt="Imagen Modal Talla M">
+                    </div>               
+                    <div class="info">
+                        <span class="closeM close">&times;</span>
+                        <div class="infoCaja2">
+                            <h2 id="modal-title">Combo<br><span class="tallas">Talla M</span></h2>
+                            <p id="modal-descriptionM">Bolsa de 12 donas, en donde puedes escoger un solo sabor de masa, una sola cobertura y un solo topping para todas las donas. ¡Elige tus sabores favoritos!</p>
+                            <hr class="linea">
+                            <p>Descripción detallada del producto</p>
+                            <div class="modal-price" id="modal-priceM">$20.000</div> <!-- Muestra el precio correcto -->
+                        </div>
+                        <button id="btnCerrarModalM" class="btn-add-cart cart shadow">Agregar al carrito</button> 
+                    </div>
+                </div>
+            </div>
+            
+            <div class="Cajas3 shadow">
+                <div class="descripcionCombo">
+                    <h1>Talla L</h1>
+                    <h2>Caja de 18 dnts.<br>
+                    ¡Elige tus sabores favoritos!</h2>
+                    <br>
+                    <div class="precio">$30.000</div>
+                    <button id="btnAgregarL" class="boton shadow">Agregar</button>
+                </div>
+                <div class="imagenCombo"><img src="Images/imagenCaja3.jpg"></div>
+            </div>
+            <div id="modalL" class="modal hidden">
+                <div class="modal-content">    
+                    <div class="imagenModal">
+                        <img id="modal-imageL" src="Images/imagenModal1.jpg" alt="Imagen Modal Talla L">
+                    </div>               
+                    <div class="info">
+                        <span class="closeL close">&times;</span>
+                        <div class="infoCaja3">
+                            <h2 id="modal-title">Combo<br><span class="tallas">Talla L.</span></h2>
+                            <p id="modal-descriptionL">Bolsa de 6 donas, en donde puedes escoger un solo sabor de masa, una sola cobertura y un solo topping para todas las donas. ¡Elige tus sabores favoritos!</p>
+                            <hr class="linea">
+                            <p>Descripción detallada del producto</p>
+                            <div class="modal-price" id="modal-priceL">$30.000</div>
+                        </div>
+                        <button id="btnCerrarModalL" class="btn-add-cart cart shadow">Agregar al carrito</button> 
+                    </div>
+                </div>
+            </div>
+            <div class="Cajas4 shadow">
+                <div class="descripcionCombo">
+                    <h1>Talla XL</h1>
+                    <h2>Caja de 24 dnts.<br>
+                    ¡Elige tus sabores favoritos!</h2>
+                    <br>
+                    <div class="precio">$35.000</div>
+                    <button class="boton btn-add-cart shadow">Agregar</button> <!-- Este botón corresponde a la talla XL -->
+                </div>
+                <div class="imagenCombo"><img src="Images/imagenCaja4.jpg"></div>
+            </div>
+            <div class="Cajas5 shadow" href="#"><img src="Images/mas.png" alt="Imagen de mas"></div>
+        </div>
+        <div class="campo"></div>
+        <div class="cajones" id="ProductMasas"></div>
+    </div>
+    <div class="ProductoMasas shadow">
+        <div class="title">
+            <div class="Masas shadow"><h1>Masa</h1></div>
+        </div>
+        <div class="seleccion">
+            <div class="Masa1 shadow">
+                <div class="descripcionMasa">
+                    <h1>Vainilla</h1>
+                    <h2>Masa con sabor a vainilla.<br>
+                    ¡Elige tus sabores favoritos!</h2>
+                    <br>
+                    <br>
+                    <div class="precio">$0.00</div>
+                    <button class="boton shadow">Más información</button>
+                </div>
+                <div class="imagenMasita"><img src="Images/Masa1.png"></div>
+            </div>
+            <div class="Masa2 shadow">
+                <div class="descripcionMasa">
+                    <h1>Chocolate</h1>
+                    <h2>Masa con sabor a chocolate.<br>
+                    ¡Elige tus sabores favoritos!</h2>
+                    <br>
+                    <br>
+                    <div class="precio">$0.00</div>
+                    <button class="boton shadow">Más información</button>
+                </div>
+                <div class="imagenMasita"><img src="Images/Masa2.png"></div>
+            </div>
+            <div class="Masa3 shadow">
+                <div class="descripcionMasa">
+                    <h1>Red Velvet</h1>
+                    <h2>Masa con sabor a red velvet.<br>
+                    ¡Elige tus sabores favoritos!</h2>
+                    <br>
+                    <br>
+                    <div class="precio">$0.00</div>
+                    <button class="boton shadow">Más información</button>
+                </div>
+                <div class="imagenMasita"><img src="Images/Masa3.png"></div>
+            </div>
+        </div>
+        <div class="campo"></div>
+        <div class="cajones" id="ProductCobertura"></div>
+    </div>
+    <div class="ProductoCobert shadow">
+        <div class="title">
+            <div class="Cobertura shadow"><h1>Cobertura</h1></div>
+        </div>
+        <div class="seleccion">
+            <div class="Cober1 shadow">
+                <div class="descripcionCober">
+                    <h1>Chocolate Blanco</h1>
+                    <h2>Elige el color que quieras.<br>
+                    ¡Elige tus sabores favoritos!</h2>
+                    <div class="precio">$0.00</div>
+                    <button class="boton shadow">Más información</button>
+                </div>
+                <div class="imagenCober"><img src="Images/cober1.png"></div>
+            </div>
+            <div class="Cober2 shadow">
+                <div class="descripcionCober">
+                    <h1>Chocolate Oscuro</h1>
+                    <h2>Bañado de chocolate negro.<br>
+                    ¡Elige tus sabores favoritos!</h2>
+                    <div class="precio">$0.00</div>
+                    <button class="boton shadow">Más información</button>
+                </div>
+                <div class="imagenCober"><img src="Images/cober2.png"></div>
+            </div>
+            <div class="Cober3 shadow">
+                <div class="descripcionCober">
+                    <h1>Arequipe</h1>
+                    <h2>Bañado de dulce de leche.<br>
+                    ¡Elige tus sabores favoritos!</h2>
+                    <br>
+                    <br>
+                    <div class="precio">$0.00</div>
+                    <button class="boton shadow">Más información</button>
+                </div>
+                <div class="imagenCober"><img src="Images/cober3.png"></div>
+            </div>
+        </div>
+        <div class="campo"></div>
+        <div class="cajones" id="ProductToppings"></div>
+    </div>
+    <div class="ProductoToppings shadow">
+        <div class="title">
+            <div class="Toppings shadow"><h1>Toppings</h1></div>
+        </div>
+        <div class="seleccion">
+            <div class="Topp1 shadow">
+                <div class="descripcionTopp">
+                    <h1>Chispas</h1>
+                    <h2>Chispas de colores.<br>
+                    ¡Elige tus sabores favoritos!</h2>
+                    <br>
+                    <br>
+                    <div class="precio">$0.00</div>
+                    <button class="boton shadow">Más info.</button>
+                </div>
+                <div class="imagenTopp"><img src="Images/pepitas.png"></div>
+            </div>
+            <div class="Topp2 shadow">
+                <div class="descripcionTopp">
+                    <h1>Oreo</h1>
+                    <h2>Trozos de galleta oreo.<br>
+                    ¡Elige tus sabores favoritos!</h2>
+                    <br>
+                    <br>
+                    <div class="precio">$0.00</div>
+                    <button class="boton shadow">Más info.</button>
+                </div>
+                <div class="imagenTopp"><img src="Images/oreo.png"></div>
+            </div>
+            <div class="Topp3 shadow">
+                <div class="descripcionTopp">
+                    <h1>M&M</h1>
+                    <h2>Chocolates M&M's.<br>
+                    ¡Elige tus sabores favoritos!</h2>
+                    <br>
+                    <br>
+                    <div class="precio">$0.00</div>
+                    <button class="boton shadow">Más info.</button>
+                </div>
+                <div class="imagenTopp"><img src="Images/mym.png"></div>
+            </div>
+            <div class="Topp4 shadow">
+                <div class="descripcionTopp">
+                    <h1>Chips</h1>
+                    <h2>Chips de chocolate blanco, oscuro o de colores.<br>
+                    ¡Elige tus sabores favoritos!</h2>
+                    <br>
+                    <div class="precio">$0.00</div>
+                    <button class="boton shadow">Más info.</button>
+                </div>
+                <div class="imagenTopp"><img src="Images/chips.png"></div>
+            </div>
+        </div>
+        <div class="campo"></div>
+        <div class="cajones" id="Product"></div>
+    </div>
+    <div class="InformacionFinal">
+        <ul class="navbarFinal">
+            <li><a href="LPkaef.html">Inicio</a></li>
+            <li><a href="Catalogo.html">Catálogo</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contactanos">Contáctanos</a></li>
+            <li><a href="#perfil">Perfil</a></li>
+        </ul>
+        <div class="Direccion">
+            <br>
+            <hr>
+            <br>
+            <p>Cra 13 # 6510, Bogotá, Colombia <br>
+                © 2024 Stefa´s Donuts.</p>
+        </div>
+    </div>
+    <script src="scripts/Catalogo.js"></script>
+</body>
+</html>

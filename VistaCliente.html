@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stefa's DNUTS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/VistaCliente.css">
+    <link rel="icon" href="icon/2.ico" sizes="128x128" type="image/x-icon">
+    <style>
+        .combos {
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <a class="navbar-brand" href="VistaCliente.html"><img src="icon/7.ico" width="300"></a>
+        <div class="collapse navbar-collapse shadow" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="VistaCliente.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Catalogo.html">Catálogo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contáctanos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        Perfil
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="Profile">
+                            <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd" />
+                        </svg>  
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="contenedor1 shadow">
+        <div class="celular">
+            <img src="Images/donlog.png" alt="Phone Image" class="img-fluid">
+        </div>
+        <div class="textoPrincipal">
+            <h1>¡La vida sabe mejor con una <span class="DNUT">DNUT!</span></h1>
+            <p class="mt-3">Haz parte de esta experiencia, <br> ¡Conocenos y <br><span class="ordena">Ordena AHORA!</span></p>
+        </div>       
+    </div>
+    <div class="contenedor2 shadow">
+        <div class="textoCapa2"><h1>¡Arma y construye tu <span class="palabra">DNUT</span> a tu gusto!</h1></div>
+        <div class="gallery">
+            <div class="gallery-item shadow">
+                <a href="Catalogo.html#ProductMasas">
+                    <img src="images/masa.png" alt="masa">
+                    <p class="titulo">Masa</p>
+                </a>
+            </div>
+            <div class="gallery-item shadow">
+                <a href="Catalogo.html#ProductCobertura">
+                    <img src="images/cobertura.png" alt="cobertura">
+                    <p class="titulo">Cobertura</p>
+                </a>
+            </div>
+            <div class="gallery-item shadow">
+                <a href="Catalogo.html#ProductToppings">
+                    <img src="images/toppings.png" alt="topping">
+                    <p class="titulo">Toppings</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor3 shadow">
+        <div class="flecha">
+            <a class="flechita" href="#"><img src="Images/flecha.png" alt="flecha"></a>
+        </div>
+        <div class="combos" id="combos"> 
+            <div class="cuadro shadow">
+                <div class="cantidad">
+                    <img src="Images/yea.png" alt="cantidadDonas">
+                </div>
+                <div class="letras">
+                    <h1>!Elige el <br>combo a tu <span class="ANTOJO">ANTOJO!</span></h1>
+                    <p class="descripcion">Elige la cantidad de DNTS que <br>quieras llevar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("combos").onclick = function() {
+            window.location.href = "Catalogo.html";
+        }
+    </script>
+
+    <div class="RedesSociales">
+        <h1>Síguenos en nuestras redes sociales </h1>
+        <h2>¡CONÓCENOS!</h2>
+        <div class="social">
+            <div class="redes">
+                <div class="redes1 shadow">
+                    <img src="Images/twitter.png" alt="twitter">
+                </div>
+                <div class="redes2 shadow">
+                    <img src="Images/facebook.png" alt="facebook">
+                </div>
+                <div class="redes3 shadow">
+                    <img src="Images/instagram.png" alt="instagram">
+                </div>
+                <h1>@Stefa'sdonuts</h1>
+            </div>
+        </div>
+    </div>
+    <div class="InformacionFinal">
+        <ul class="navbarFinal">
+            <li><a href="LPCliente.html">Inicio</a></li>
+            <li><a href="Catalogo.html">Catálogo</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contactanos">Contáctanos</a></li>
+            <li><a href="#perfil">Perfil</a></li>
+        </ul>
+        <div class="Direccion">
+            <br>
+            <hr>
+            <br>
+            <p>Cra 13 # 6510, Bogotá, Colombia <br>
+                © 2024 Stefa´s Donuts.</p>
+        </div>
+    </div>
+</body>
+</html>
