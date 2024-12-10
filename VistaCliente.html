@@ -25,13 +25,13 @@
                     <a class="nav-link" href="Catalogo.html">Catálogo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Nosotros</a>
+                    <a class="nav-link" href="Nosotros.html">Nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contáctanos</a>
+                    <a class="nav-link" href="Contactanos.html">Contáctanos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="Perfil.html">
                         Perfil
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="Profile">
                             <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd" />
@@ -94,32 +94,57 @@
             window.location.href = "Catalogo.html";
         }
     </script>
-
+    <div class="InicioSesion shadow">
+        <h1>¿Ya tienes <span class="cuenta">CUENTA?</span></h1>
+        <h2>Inicia Sesión</h2>
+        <br>
+        <div class="row">
+            <div class="col-5">
+                <input type="text" name="txtCorreo" class="form-control shadow" placeholder="Correo" required maxlength="50">
+            </div>
+            <div class="col-5">
+                <input type="password" name="txtContraseña" class="form-control shadow" placeholder="Contraseña" required maxlength="50"> <!-- Cambiado a password -->
+            </div>
+            <div>
+                <button class="btn btn form mx-2 shadow">INICIAR SESIÓN</button>
+            </div>
+            <div class="forgot">
+                <button type="button" class="btn-link pr-5">¿Olvidaste tu contraseña?</button>
+            </div>
+        </div>
+    </div>
     <div class="RedesSociales">
-        <h1>Síguenos en nuestras redes sociales </h1>
+        <h1>Síguenos en nuestras redes sociales</h1>
         <h2>¡CONÓCENOS!</h2>
         <div class="social">
             <div class="redes">
                 <div class="redes1 shadow">
-                    <img src="Images/twitter.png" alt="twitter">
+                    <a href="https://x.com/?lang=es" target="_blank">
+                        <img src="Images/twitter.png" alt="Twitter">
+                    </a>
                 </div>
                 <div class="redes2 shadow">
-                    <img src="Images/facebook.png" alt="facebook">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img src="Images/facebook.png" alt="Facebook">
+                    </a>
                 </div>
                 <div class="redes3 shadow">
-                    <img src="Images/instagram.png" alt="instagram">
+                    <a href="https://www.instagram.com/09_tefy_09/" target="_blank">
+                        <img src="Images/instagram.png" alt="Instagram">
+                    </a>
                 </div>
                 <h1>@Stefa'sdonuts</h1>
             </div>
         </div>
     </div>
+    
     <div class="InformacionFinal">
         <ul class="navbarFinal">
-            <li><a href="LPCliente.html">Inicio</a></li>
+            <li><a href="VistaCliente.html">Inicio</a></li>
             <li><a href="Catalogo.html">Catálogo</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#contactanos">Contáctanos</a></li>
-            <li><a href="#perfil">Perfil</a></li>
+            <li><a href="Nosotros.html">Nosotros</a></li>
+            <li><a href="Contactanos.html">Contáctanos</a></li>
+            <li><a href="Perfil.html">Perfil</a></li>
         </ul>
         <div class="Direccion">
             <br>

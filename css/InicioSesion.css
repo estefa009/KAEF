@@ -10,9 +10,6 @@ body {
     border-radius: 100px;
     margin-left: 100px;
 }
-
-
-
 input.form-control {
     border-radius: 100px; 
     background-color: white;
@@ -74,8 +71,7 @@ input.form-control:hover {
 }
 @font-face {
     font-family: 'Dunkin';
-    src: url(../fonts/Dunkin.otf) format('truetype');
-    
+    src: url('fonts/Dunkin.otf') format('truetype');
 }
 .row img{
     width: 200px;

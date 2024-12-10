@@ -20,13 +20,13 @@
                     <a class="nav-link" href="LPCatalogo.html">Catálogo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Nosotros</a>
+                    <a class="nav-link" href="LPNosotros.html">Nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contáctanos</a>
+                    <a class="nav-link" href="LPContactanos.html">Contáctanos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="InicioSesion.html">
+                    <a class="nav-link" href="InicioSesion.php">
                         Iniciar sesión
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="Profile">
                             <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-4.28 9.22a.75.75 0 0 0 0 1.06l3 3a.75.75 0 1 0 1.06-1.06l-1.72-1.72h5.69a.75.75 0 0 0 0-1.5h-5.69l1.72-1.72a.75.75 0 0 0-1.06-1.06l-3 3Z" clip-rule="evenodd" />
@@ -51,7 +51,7 @@
                     <h2>Bolsa de 6 donas.<br>
                     ¡Elige tus sabores favoritos!</h2>
                     <br>
-                    <div class="precio">$00.000</div>
+                    <div class="precio">$10.000</div>
                     <button class="boton shadow" id="btnInfoS">Más info.</button>
                 </div>
                 <div class="imagenCombo"><img src="Images/imagenCaja1.jpg" alt="Imagen Combo Talla S"></div>
@@ -69,7 +69,6 @@
                             <p id="modal-descriptionS">Bolsa de 6 donas, en donde puedes escoger un solo sabor de masa, una sola cobertura y un solo topping para todas las donas. ¡Elige tus sabores favoritos!</p>
                             <hr class="linea">
                             <p>Descripción detallada del producto</p>
-                            <div class="modal-price" id="modal-priceS">$0.00</div>
                         </div>
                         <button id="btnCerrarModalS">Cerrar</button> 
                     </div>
@@ -82,7 +81,7 @@
                     <h2>Bolsa/caja de 12 donas.<br>
                     ¡Elige tus sabores favoritos!</h2>
                     <br>
-                    <div class="precio">$10.000</div>
+                    <div class="precio">$20.000</div>
                     <button class="boton shadow" id="btnInfoM">Más info.</button>
                 </div>
                 <div class="imagenCombo"><img src="Images/caja.png" alt="Imagen Combo Talla M"></div>
@@ -100,7 +99,6 @@
                             <p id="modal-descriptionM">Bolsa/caja de 12 donas, en donde puedes escoger varios sabores de masa, coberturas y toppings. ¡Elige tus sabores favoritos!</p>
                             <hr class="linea">
                             <p>Descripción detallada del producto</p>
-                            <div class="modal-price" id="modal-priceM">$10.000</div>
                         </div>
                         <button id="btnCerrarModalM">Cerrar</button> 
                     </div>
@@ -113,7 +111,7 @@
                     <h2>Caja de 18 dnts.<br>
                     ¡Elige tus sabores favoritos!</h2>
                     <br>
-                    <div class="precio">$10.000</div>
+                    <div class="precio">$30.000</div>
                     <button class="boton shadow" id="btnInfoL">Más info.</button>
                 </div>
                 <div class="imagenCombo"><img src="Images/imagenCaja3.jpg"></div>
@@ -131,7 +129,6 @@
                             <p id="modal-descriptionL">Caja de 12 donas, en donde puedes escoger varios sabores de masa, coberturas y toppings. ¡Elige tus sabores favoritos!</p>
                             <hr class="linea">
                             <p>Descripción detallada del producto</p>
-                            <div class="modal-price" id="modal-priceL">$10.000</div>
                         </div>
                         <button id="btnCerrarModalL">Cerrar</button> 
                     </div>
@@ -145,11 +142,29 @@
                     ¡Elige tus sabores favoritos!</h2>
                     <br>
                     <div class="precio">$40.000</div>
-                    <button class="boton btn-add-cart shadow">Más info.</button>
+                    <button class="boton shadow"id="btnInfoXL">Más info.</button>
                 </div>
                 <div class="imagenCombo"><img src="Images/imagenCaja4.jpg"></div>
             </div>
-            <div class="Cajas5 shadow" href="#"><img src="Images/mas.png" alt="Imagen de mas"></div>
+            <div class="Cajas5 shadow href="#"><img src="Images/mas.png" alt="Imagen de mas"></div>
+
+            <div id="modalXL" class="modal hidden">
+                <div class="modal-content">    
+                    <div class="imagenModal">
+                        <img id="modal-imageXL" src="Images/imagenModal1.jpg" alt="Imagen Modal Talla XL">
+                    </div>               
+                    <div class="info">
+                        <span class="closeXL close">&times;</span>
+                        <div class="infoCaja">
+                            <h2 id="modal-titleXL">Combo<br><span class="tallas">Talla XL.</span></h2>
+                            <p id="modal-descriptionXL">Caja de 24 donas, en donde puedes escoger varios sabores de masa, coberturas y toppings. ¡Elige tus sabores favoritos!</p>
+                            <hr class="linea">
+                            <p>Descripción detallada del producto</p>
+                        </div>
+                        <button id="btnCerrarModalXL">Cerrar</button> 
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="campo"></div>
         <div class="cajones" id="ProductMasas"></div>
@@ -167,9 +182,26 @@
                     <br>
                     <br>
                     <div class="precio">$0.00</div>
-                    <button class="boton shadow">Más información</button>
+                    <button class="boton shadow" id="btnInfoV">Más información</button>
                 </div>
                 <div class="imagenMasita"><img src="Images/Masa1.png"></div>
+            </div>
+            <div id="modalV" class="modal hidden">
+                <div class="modal-content">    
+                    <div class="imagenModal">
+                        <img id="modal-imageV" src="Images/Masa1.png" alt="Imagen Modal V">
+                    </div>               
+                    <div class="info">
+                        <span class="closeV close">&times;</span>
+                        <div class="infoCaja">
+                            <h2 id="modal-titleV">Masa<br><span class="tallas">Vainilla</span></h2>
+                            <p id="modal-descriptionV">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam pariatur error enim. Optio nobis vero voluptas repellendus ducimus consequatur impedit, laudantium possimus aspernatur, perspiciatis iure eius magnam cumque! Iure, voluptate.</p>
+                            <hr class="linea">
+                            <p>Descripción detallada del producto</p>
+                        </div>
+                        <button id="btnCerrarModalV">Cerrar</button> 
+                    </div>
+                </div>
             </div>
             <div class="Masa2 shadow">
                 <div class="descripcionMasa">
@@ -179,9 +211,26 @@
                     <br>
                     <br>
                     <div class="precio">$0.00</div>
-                    <button class="boton shadow">Más información</button>
+                    <button class="boton shadow" id="btnInfoC">Más información</button>
                 </div>
                 <div class="imagenMasita"><img src="Images/Masa2.png"></div>
+            </div>
+            <div id="modalC" class="modal hidden">
+                <div class="modal-content">    
+                    <div class="imagenModal">
+                        <img id="modal-imageC" src="Images/Masa2.png" alt="Imagen Modal C">
+                    </div>               
+                    <div class="info">
+                        <span class="closeC close">&times;</span>
+                        <div class="infoCaja">
+                            <h2 id="modal-titleC">Masa<br><span class="tallas">Chocolate</span></h2>
+                            <p id="modal-descriptionC">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam pariatur error enim. Optio nobis vero voluptas repellendus ducimus consequatur impedit, laudantium possimus aspernatur, perspiciatis iure eius magnam cumque! Iure, voluptate.</p>
+                            <hr class="linea">
+                            <p>Descripción detallada del producto</p>
+                        </div>
+                        <button id="btnCerrarModalC">Cerrar</button> 
+                    </div>
+                </div>
             </div>
             <div class="Masa3 shadow">
                 <div class="descripcionMasa">
@@ -191,9 +240,26 @@
                     <br>
                     <br>
                     <div class="precio">$0.00</div>
-                    <button class="boton shadow">Más información</button>
+                    <button class="boton shadow" id="btnInfoR">Más información</button>
                 </div>
                 <div class="imagenMasita"><img src="Images/Masa3.png"></div>
+            </div>
+            <div id="modalR" class="modal hidden">
+                <div class="modal-content">    
+                    <div class="imagenModal">
+                        <img id="modal-imageR" src="Images/Masa3.png" alt="Imagen Modal R">
+                    </div>               
+                    <div class="info">
+                        <span class="closeR close">&times;</span>
+                        <div class="infoCaja">
+                            <h2 id="modal-titleR">Masa<br><span class="tallas">Red Velvet</span></h2>
+                            <p id="modal-descriptionR">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam pariatur error enim. Optio nobis vero voluptas repellendus ducimus consequatur impedit, laudantium possimus aspernatur, perspiciatis iure eius magnam cumque! Iure, voluptate.</p>
+                            <hr class="linea">
+                            <p>Descripción detallada del producto</p>
+                        </div>
+                        <button id="btnCerrarModalR">Cerrar</button> 
+                    </div>
+                </div>
             </div>
         </div>
         <div class="campo"></div>
@@ -210,9 +276,26 @@
                     <h2>Elige el color que quieras.<br>
                     ¡Elige tus sabores favoritos!</h2>
                     <div class="precio">$0.00</div>
-                    <button class="boton shadow">Más información</button>
+                    <button class="boton shadow" id="btnInfoB">Más información</button>
                 </div>
                 <div class="imagenCober"><img src="Images/cober1.png"></div>
+            </div>
+            <div id="modalB" class="modal hidden">
+                <div class="modal-content">    
+                    <div class="imagenModal">
+                        <img id="modal-imageB" src="Images/cober1.png" alt="Imagen Modal B">
+                    </div>               
+                    <div class="info">
+                        <span class="closeB close">&times;</span>
+                        <div class="infoCaja">
+                            <h2 id="modal-titleB">Cobertura<br><span class="tallas">Chocolate blanco</span></h2>
+                            <p id="modal-descriptionB">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam pariatur error enim. Optio nobis vero voluptas repellendus ducimus consequatur impedit, laudantium possimus aspernatur, perspiciatis iure eius magnam cumque! Iure, voluptate.</p>
+                            <hr class="linea">
+                            <p>Descripción detallada del producto</p>
+                        </div>
+                        <button id="btnCerrarModalB">Cerrar</button> 
+                    </div>
+                </div>
             </div>
             <div class="Cober2 shadow">
                 <div class="descripcionCober">
@@ -220,9 +303,26 @@
                     <h2>Bañado de chocolate negro.<br>
                     ¡Elige tus sabores favoritos!</h2>
                     <div class="precio">$0.00</div>
-                    <button class="boton shadow">Más información</button>
+                    <button class="boton shadow" id="btnInfoOS">Más información</button>
                 </div>
                 <div class="imagenCober"><img src="Images/cober2.png"></div>
+            </div>
+            <div id="modalOS" class="modal hidden">
+                <div class="modal-content">    
+                    <div class="imagenModal">
+                        <img id="modal-imageOS" src="Images/cober2.png" alt="Imagen Modal OS">
+                    </div>               
+                    <div class="info">
+                        <span class="closeOS close">&times;</span>
+                        <div class="infoCaja">
+                            <h2 id="modal-titleOS">Cobertura<br><span class="tallas">Chocolate oscuro</span></h2>
+                            <p id="modal-descriptionOS">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam pariatur error enim. Optio nobis vero voluptas repellendus ducimus consequatur impedit, laudantium possimus aspernatur, perspiciatis iure eius magnam cumque! Iure, voluptate.</p>
+                            <hr class="linea">
+                            <p>Descripción detallada del producto</p>
+                        </div>
+                        <button id="btnCerrarModalOS">Cerrar</button> 
+                    </div>
+                </div>
             </div>
             <div class="Cober3 shadow">
                 <div class="descripcionCober">
@@ -232,9 +332,26 @@
                     <br>
                     <br>
                     <div class="precio">$0.00</div>
-                    <button class="boton shadow">Más información</button>
+                    <button class="boton shadow" id="btnInfoA">Más información</button>
                 </div>
                 <div class="imagenCober"><img src="Images/cober3.png"></div>
+            </div>
+            <div id="modalA" class="modal hidden">
+                <div class="modal-content">    
+                    <div class="imagenModal">
+                        <img id="modal-imageA" src="Images/cober3.png" alt="Imagen Modal A">
+                    </div>               
+                    <div class="info">
+                        <span class="closeA close">&times;</span>
+                        <div class="infoCaja">
+                            <h2 id="modal-titleA">Cobertura<br><span class="tallas">Arequipe</span></h2>
+                            <p id="modal-descriptionA">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam pariatur error enim. Optio nobis vero voluptas repellendus ducimus consequatur impedit, laudantium possimus aspernatur, perspiciatis iure eius magnam cumque! Iure, voluptate.</p>
+                            <hr class="linea">
+                            <p>Descripción detallada del producto</p>
+                        </div>
+                        <button id="btnCerrarModalA">Cerrar</button> 
+                    </div>
+                </div>
             </div>
         </div>
         <div class="campo"></div>
@@ -253,9 +370,26 @@
                     <br>
                     <br>
                     <div class="precio">$0.00</div>
-                    <button class="boton shadow">Más info.</button>
+                    <button class="boton shadow" id="btnInfoT1">Más info.</button>
                 </div>
                 <div class="imagenTopp"><img src="Images/pepitas.png"></div>
+            </div>
+            <div id="modalT1" class="modal hidden">
+                <div class="modal-content">    
+                    <div class="imagenModal">
+                        <img id="modal-imageT1" src="Images/pepitas.png" alt="Imagen Modal T1">
+                    </div>               
+                    <div class="info">
+                        <span class="closeT1 close">&times;</span>
+                        <div class="infoCaja">
+                            <h2 id="modal-titleT1">Topping<br><span class="tallas">Chispas</span></h2>
+                            <p id="modal-descriptionT1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam pariatur error enim. Optio nobis vero voluptas repellendus ducimus consequatur impedit, laudantium possimus aspernatur, perspiciatis iure eius magnam cumque! Iure, voluptate.</p>
+                            <hr class="linea">
+                            <p>Descripción detallada del producto</p>
+                        </div>
+                        <button id="btnCerrarModalT1">Cerrar</button> 
+                    </div>
+                </div>
             </div>
             <div class="Topp2 shadow">
                 <div class="descripcionTopp">
@@ -265,9 +399,26 @@
                     <br>
                     <br>
                     <div class="precio">$0.00</div>
-                    <button class="boton shadow">Más info.</button>
+                    <button class="boton shadow" id="btnInfoT2">Más info.</button>
                 </div>
                 <div class="imagenTopp"><img src="Images/oreo.png"></div>
+            </div>
+            <div id="modalT2" class="modal hidden">
+                <div class="modal-content">    
+                    <div class="imagenModal">
+                        <img id="modal-imageT2" src="Images/oreo.png" alt="Imagen Modal T2">
+                    </div>               
+                    <div class="info">
+                        <span class="closeT2 close">&times;</span>
+                        <div class="infoCaja">
+                            <h2 id="modal-titleT2">Topping<br><span class="tallas">Oreo</span></h2>
+                            <p id="modal-descriptionT2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam pariatur error enim. Optio nobis vero voluptas repellendus ducimus consequatur impedit, laudantium possimus aspernatur, perspiciatis iure eius magnam cumque! Iure, voluptate.</p>
+                            <hr class="linea">
+                            <p>Descripción detallada del producto</p>
+                        </div>
+                        <button id="btnCerrarModalT2">Cerrar</button> 
+                    </div>
+                </div>
             </div>
             <div class="Topp3 shadow">
                 <div class="descripcionTopp">
@@ -277,9 +428,26 @@
                     <br>
                     <br>
                     <div class="precio">$0.00</div>
-                    <button class="boton shadow">Más info.</button>
+                    <button class="boton shadow" id="btnInfoT3">Más info.</button>
                 </div>
                 <div class="imagenTopp"><img src="Images/mym.png"></div>
+            </div>
+            <div id="modalT3" class="modal hidden">
+                <div class="modal-content">    
+                    <div class="imagenModal">
+                        <img id="modal-imageT3" src="Images/mym.png" alt="Imagen Modal T3">
+                    </div>               
+                    <div class="info">
+                        <span class="closeT3 close">&times;</span>
+                        <div class="infoCaja">
+                            <h2 id="modal-titleT3">Topping<br><span class="tallas">M&M's</span></h2>
+                            <p id="modal-descriptionT3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam pariatur error enim. Optio nobis vero voluptas repellendus ducimus consequatur impedit, laudantium possimus aspernatur, perspiciatis iure eius magnam cumque! Iure, voluptate.</p>
+                            <hr class="linea">
+                            <p>Descripción detallada del producto</p>
+                        </div>
+                        <button id="btnCerrarModalT3">Cerrar</button> 
+                    </div>
+                </div>
             </div>
             <div class="Topp4 shadow">
                 <div class="descripcionTopp">
@@ -288,9 +456,26 @@
                     ¡Elige tus sabores favoritos!</h2>
                     <br>
                     <div class="precio">$0.00</div>
-                    <button class="boton shadow">Más info.</button>
+                    <button class="boton shadow" id="btnInfoT4">Más info.</button>
                 </div>
                 <div class="imagenTopp"><img src="Images/chips.png"></div>
+            </div>
+            <div id="modalT4" class="modal hidden">
+                <div class="modal-content">    
+                    <div class="imagenModal">
+                        <img id="modal-imageT4" src="Images/chips.png" alt="Imagen Modal T4">
+                    </div>               
+                    <div class="info">
+                        <span class="closeT4 close">&times;</span>
+                        <div class="infoCaja">
+                            <h2 id="modal-titleT4">Topping<br><span class="tallas">Chips</span></h2>
+                            <p id="modal-descriptionT4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam pariatur error enim. Optio nobis vero voluptas repellendus ducimus consequatur impedit, laudantium possimus aspernatur, perspiciatis iure eius magnam cumque! Iure, voluptate.</p>
+                            <hr class="linea">
+                            <p>Descripción detallada del producto</p>
+                        </div>
+                        <button id="btnCerrarModalT4">Cerrar</button> 
+                    </div>
+                </div>
             </div>
         </div>
         <div class="campo"></div>
@@ -300,9 +485,8 @@
         <ul class="navbarFinal">
             <li><a href="LPkaef.html">Inicio</a></li>
             <li><a href="LPCatalogo.html">Catálogo</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#contactanos">Contáctanos</a></li>
-            <li><a href="#perfil">Perfil</a></li>
+            <li><a href="LPNosotros.html">Nosotros</a></li>
+            <li><a href="LPContactanos.html">Contáctanos</a></li>
         </ul>
         <div class="Direccion">
             <br>

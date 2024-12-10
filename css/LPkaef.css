@@ -7,13 +7,6 @@ body {
 
 }
 
-
-
-.Profile{
-    width: auto;
-    height: 30px;
-    padding-left: 0px;
-}
 .logo {
     font-weight: bold;
     padding-left: 200px;
@@ -26,34 +19,28 @@ body {
 h1 {
     font-weight: bold;
 }
-
-.btn{
+.btn1{
+    font-size: large;
     border-radius: 50px;
-    background-color: #ffc0cb;
-    color: #695450;
-    border: 2px solid#ffc0cb;
+    background-color: #4e4032;
+    color: #ffc0cb;
+    border: 2px solid#695450;
+    font-family: "Dunkin";
+    padding: 10px 40px;
+}
+.btn2{
+    border-radius: 50px;
+    background-color: #4e4032;
+    color: #ffc0cb;
+    border: 2px solid #4e4032;
     font-family: "Dunkin";
 }
 .btn:hover{
-    background-color: #fff;
-    border: 2px solid #fff;
-    color: #ffc0cb;
-    transform: scale(1.05);
-    font-family: "Dunkin";
-}
-
-
-.btn-outline {
-    background-color: white;
-    border-radius: 50px;
-    color: #ffc0cb;
-    border: 2px solid white;
-}
-.btn-outline:hover {
     background-color: #ffc0cb;
     border: 2px solid #ffc0cb;
     color: #695450;
     transform: scale(1.05);
+    font-family: "Dunkin";
 }
 .botones {
     margin-left: 100px;
@@ -63,11 +50,11 @@ h1 {
     max-width: 200px;
     height: auto;
 }
-
 .navbar-nav .nav-item .nav-link {
     margin-right: 15px;
     color: #4e4032;
     padding: 10px;
+    margin: 0 10px;  
 }
 .navbar-nav .nav-item .nav-link:hover{
     color: #93877e;
@@ -78,7 +65,7 @@ h1 {
 }
 @font-face {
     font-family: 'Dunkin';
-    src:url(../fonts/Dunkin.otf) format('truetype');
+    src: url('fonts/Dunkin.otf') format('truetype');
 }
 
 .navbar-collapse {
@@ -95,7 +82,6 @@ border-radius: 100px;
     height: 100%;
     width: 100%;
 }
-
 .contenedor1 {
     background-color: white;
     margin: auto;
@@ -140,10 +126,10 @@ margin-top: 40px;
     color: #88584e;
     font-size: 20px;
 }
-.nav-link img{
+.Profile{
     width: auto;
     height: 30px;
-    padding-left: 30px;
+    padding-left: 0px;
 }
 .textoCapa2 {
     font-family: "Dunkin";
@@ -268,7 +254,7 @@ margin-top: 40px;
     transform: scale(1.05);
 }
 .cuadro:hover{
-    transform: scale(1.05); 
+    transform: scale(1.02); 
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 .InicioSesion {
@@ -285,7 +271,7 @@ margin-top: 40px;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image:url(../Images/fondo.jpg);
+    background-image: url('Images/fondo.jpg');
     background-size: cover;
     background-position: center;
     opacity: 0.5;
@@ -431,4 +417,14 @@ margin: 10px;
     color: #93877e;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+a {
+    text-decoration: none; /* Elimina la línea debajo de los enlaces */
+    color: inherit; /* Mantiene el color del texto de la etiqueta <p> */
+}
+
+a:hover {
+    text-decoration: none; /* Asegura que no aparezca la línea al hacer hover */
+}
+
+
 

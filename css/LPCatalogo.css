@@ -21,7 +21,7 @@ body {
 }
 @font-face {
     font-family: 'Dunkin';
-    src:url(../fonts/Dunkin.otf) format('truetype');
+    src: url('fonts/Dunkin.otf') format('truetype');
 }
 .navbar-collapse {
 padding-right: 300px;
@@ -593,9 +593,31 @@ border-radius: 100px;
     color: #4e4032;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.infoCaja {
+    color: #4e4032;
+}
 .cart-empty{
     padding: 20px;
     text-align: center;
+}
+#btnCerrarModalS, #btnCerrarModalM, #btnCerrarModalL, #btnCerrarModalXL, #btnCerrarModalV, #btnCerrarModalC, #btnCerrarModalR, #btnCerrarModalB, #btnCerrarModalOS, #btnCerrarModalA, #btnCerrarModalT1, #btnCerrarModalT2, #btnCerrarModalT3, #btnCerrarModalT4{
+    height: 40px;
+    width: 70%;
+    border-radius: 50px;
+    background-color: #4e4032;
+    color: #ffc0cb;
+    border: 2px solid#4e4032;
+    font-family: "Dunkin";
+    margin-left: 10px;
+    position: relative;
+    z-index: 3;
+}
+#btnCerrarModalS:hover, #btnCerrarModalM:hover, #btnCerrarModalL:hover, #btnCerrarModalXL:hover, #btnCerrarModalV:hover, #btnCerrarModalC:hover, #btnCerrarModalR:hover, #btnCerrarModalB:hover, #btnCerrarModalOS:hover, #btnCerrarModalA:hover, #btnCerrarModalT1:hover, #btnCerrarModalT2:hover, #btnCerrarModalT3:hover, #btnCerrarModalT4:hover{
+    background-color: #ffc0cb;
+    border: 2px solid #ffc0cb;
+    color: #695450;
+    transform: scale(1.05);
+    font-family: "Dunkin";
 }
 
 

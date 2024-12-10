@@ -57,7 +57,7 @@ h1 {
 }
 @font-face {
     font-family: 'Dunkin';
-    src:url(../fonts/Dunkin.otf) format('truetype');
+    src: url('fonts/Dunkin.otf') format('truetype');
 }
 
 .navbar-collapse {
@@ -73,6 +73,11 @@ border-radius: 100px;
 .navbar-brand img{
     height: 100%;
     width: 100%;
+}
+.Profile{
+    width: auto;
+    height: 30px;
+    padding-left: 0px;
 }
 .contenedor1 {
     background-color: white;
@@ -117,11 +122,6 @@ margin-top: 40px;
 .mt-3 {
     color: #88584e;
     font-size: 20px;
-}
-.Profile{
-    width: auto;
-    height: 30px;
-    padding-left: 0px;
 }
 .textoCapa2 {
     font-family: "Dunkin";
@@ -270,11 +270,24 @@ margin-top: 40px;
     z-index: -1; /* Para que la imagen quede detrás del contenido */
 }
 
-
+.InicioSesion h1 {
+    font-family: "Dunkin";
+    color: #4e4032;
+    font-size: 60px;
+    text-align: center;
+    padding-top: 100px;
+    z-index: 1; /* Asegura que el texto esté sobre la imagen */
+    position: relative;
+}
 .cuenta {
     font-size: 80px;
 }
-
+.InicioSesion h2 {
+    font-family: "Dunkin";
+    color: #695450;
+    font-size: 20px;
+    text-align: center;
+}
 input.form-control {
     border-radius: 100px; 
     background-color: white;
